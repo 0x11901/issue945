@@ -1,0 +1,18 @@
+
+
+include("config_public")
+
+cluster = root .. "config/cluster_list.lua"
+snax = root .. "./server/skynet/test/?.lua;"
+
+luaservice =
+    luaservice ..
+    root ..
+        "./src/?.lua;" ..
+            root ..
+                "./src/service/?.lua;" ..
+                    root .. "./src/service/common/?.lua;" .. root .. "./server/skynet/examples/?.lua;"
+
+lua_path = lua_path .. root .. "src/?.lua;" .. root .. "src/service/?.lua;" .. root .. "src/service/?/?.lua;"
+
+start = "c1"
